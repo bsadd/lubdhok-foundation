@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ user.username }}{% endblock %}
+
+{% block page_card_content %}
+ 
+  <h1 class="h2">Edit Account</h1>
+
+  <div class="card border-left-3 border-left-success">
+      <ul class="nav nav-tabs nav-tabs-card">
+          <li class="nav-item">
+              <a class="nav-link active" href="#" data-toggle="tab">Basic</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_change_password' %}">Chagne Password</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_email' %}">Update Email</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'socialaccount_connections' %}">Social Accounts</a>
+          </li>
+      </ul>
+      <div class="tab-content card-body">
+          <div class="tab-pane active" id="first">
+              {% include 'forms/account_basic.html' %}
+          </div>
+      </div>
+  </div>
+
+
+{% endblock %}

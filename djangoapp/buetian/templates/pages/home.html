@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block sidebar_container %}
+    {% if request.user.is_authenticated %}
+        {% include 'partials/sidebars.html' %}
+    {% endif %}
+{% endblock %}
+
+
+{% block page_content %}
+  {% if request.user.is_authenticated %}
+    {% include 'partials/dashboard.html' %}
+  {% else %}
+    {% include 'partials/landing.html' %}
+  {% endif %}
+{% endblock %}

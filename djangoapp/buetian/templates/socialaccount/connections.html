@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load socialaccount %}
+
+{% block title %}{% trans "Account Connections" %}{% endblock %}
+
+{% block page_card_content %}
+
+  <h1 class="h2">{% trans "Social Accounts" %}</h1>
+
+  <div class="card border-left-3 border-left-success">
+      <ul class="nav nav-tabs nav-tabs-card">
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'users:update' %}" >Basic</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_change_password' %}">Chagne Password</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_email' %}">Update Email</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Social Accounts</a>
+          </li>
+      </ul>
+      <div class="card-header d-flex align-items-center">
+        <div class="flex">
+            <h4 class="card-title">{% trans 'Link to social accounts' %}</h4>
+        </div>
+      </div>
+      <div class="tab-content card-body">
+          <div class="tab-pane active" id="fourth">
+            {% get_social_accounts user as accounts %}
+
+            <p>
+            {% if not accounts.facebook %}              
+              <a href="{% provider_login_url 'facebook' process="connect" scope=scope auth_params=auth_params %}" class="btn btn-outline-primary btn-block">
+                  <span class="fab fa-facebook mr-2"></span>
+                  Link Facebook
+              </a>
+            {% else %}
+                {% include 'forms/social_connection.html' with brand_name='facebook' %}
+            {% endif %}
+            </p>
+
+            <p>
+            {% if not accounts.google %}
+                  <a href="{% provider_login_url 'google' process="connect" scope=scope auth_params=auth_params %}" class="btn btn-outline-primary btn-block">
+                      <span class="fab fa-google mr-2"></span>
+                      Link Google
+                  </a>
+            {% else %}
+                {% include 'forms/social_connection.html' with brand_name='google' %}
+            {% endif %}
+            </p>
+
+            {% include "socialaccount/snippets/login_extra.html" %}
+          </div>
+      </div>
+  </div>
+
+
+{% endblock %}
