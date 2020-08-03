@@ -1,0 +1,36 @@
+.homeSection {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 0;
+  padding: 25px 50px;
+  justify-content: center;
+}
+
+.homeSection.reverse {
+  flex-direction: row-reverse;
+}
+
+.homeSectionTitle {
+  font-size: 36px;
+  color: #a23c38;
+  display: flex;
+  flex: 0.4;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.homeSectionDescription {
+  display: flex;
+  flex-direction: column;
+  flex: 0.4;
+}
+
+@media(max-width: 512px) {
+  .homeSection {
+    flex-direction: column;
+  }
+  .homeSection.reverse {
+    flex-direction: column;
+   }
+}
