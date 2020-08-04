@@ -18,7 +18,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'BUETAA',
+    title: 'Lubdhok',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
