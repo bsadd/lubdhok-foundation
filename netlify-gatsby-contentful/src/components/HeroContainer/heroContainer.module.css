@@ -1,0 +1,63 @@
+.hero {
+  position: relative;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  left: calc(-50vw + 50%);
+  width: 100vw;
+}
+
+.heroImage {
+  /*
+    Ensure golden ratio for the hero size while limiting it to some extend to
+    the viewport width
+  */
+  height: 61.8vh;
+  max-height: 400px;
+}
+
+.heroBtn {
+  background: #a23c38;
+  padding: 15px 18px;
+  text-decoration: none;
+  border-radius: 28px;
+  bottom: -12px;
+  position: relative;
+  font-family: monospace;
+}
+.heroBtn svg {
+  padding-right: 10px;
+}
+
+.heroDetails {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  font-size: 14px;
+  padding: 0 0.5em;
+}
+
+@media(min-width: 600px) {
+  .heroDetails {
+    font-size: 16px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .heroDetails {
+    font-size: 20px;
+  }
+}
+
+.heroHeadline {
+  margin: 0;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 1.125em;
+  font-weight: bold;
+}

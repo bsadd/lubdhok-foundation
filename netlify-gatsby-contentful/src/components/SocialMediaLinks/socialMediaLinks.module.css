@@ -1,0 +1,58 @@
+.socialIcons {
+  margin-top: 15px;
+  display: flex;
+}
+
+.socialIcons > a {
+  height: 30px;
+  width: 30px;
+  background: #c1c1c1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.socialIcons.lg > a {
+  height: 90px;
+  width: 90px;
+  margin-right: 20px;
+}
+.socialIcons.lg > a.facebook {
+  background: #3b5998;
+}
+.socialIcons.lg > a.youtube {
+  background: #cd201f;
+}
+.socialIcons.lg > a.linkedin {
+  background: #0077b5;
+}
+
+.socialIcons.lg > a > svg {
+  color: #c1c1c1;
+}
+
+.socialIcons > a.facebook:hover {
+  background: #3b5998;
+}
+.socialIcons > a.youtube:hover {
+  background: #cd201f;
+}
+.socialIcons > a.linkedin:hover {
+  background: #0077b5;
+}
+
+.socialIcons > a:hover > svg {
+  color: #c1c1c1;
+}
+
+.socialIcons > a > svg {
+  color: #4c4c4c;
+}
+
+@media(max-width: 512px) {
+  .socialIcons {
+    justify-content: center;
+  }
+}

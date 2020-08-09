@@ -1,0 +1,17 @@
+.getInTouchPage {
+  padding: 0 30px;
+  margin-bottom: 40px;
+}
+
+.getInTouchPage h2 {
+  font-size: 48px;
+  color: #a23c38;
+}
+.getInTouchPage h3 {
+  color: #a23c38;
+}
+
+.getInTouchPage .adminEmail {
+  color: #a23c38;
+  font-weight: bold; 
+}

@@ -1,0 +1,9 @@
+.dateComponent {
+  display: inline-block;
+  color: #a23c38;
+  line-height: 24px;
+}
+
+.dateComponent > div:last-child {
+  font-size: 38px;
+}

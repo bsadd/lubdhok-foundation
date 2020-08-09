@@ -1,0 +1,35 @@
+.navigationLogo {
+  display: flex;
+  margin: 0;
+}
+
+.navigationLogo > div {
+  display: flex;
+}
+.navigationLogo > div > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navigationLogo > div > a > img {
+  height: 60px;
+  width: 60px;
+}
+
+.navigationLogoText {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: #a23c38;
+  border-left: 1px solid #a23c38;
+  padding-left: 10px;
+  margin-left: 10px;
+  line-height: 20px;
+}
+
+.lightLogoText {
+  color: #c1c1c1;
+  border-left: 1px solid #c1c1c1;
+}
