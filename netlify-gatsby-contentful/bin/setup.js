@@ -68,16 +68,20 @@ inquirer
     const configFiles = [`.env.development`, `.env.production`]
       .map(file => path.join(__dirname, '..', file))
 
-    const fileContents = [
+    const fileContents = (env) =>  [
       `# All environment variables will be sourced`,
       `# and made available to gatsby-config.js, gatsby-node.js, etc.`,
       `# Do NOT commit this file to source control`,
       `CONTENTFUL_SPACE_ID='${spaceId}'`,
+      `CONTENTFUL_ENV=${env}`,
       `CONTENTFUL_ACCESS_TOKEN='${accessToken}'`
     ].join('\n') + '\n'
 
-    configFiles.forEach(file => {
-      writeFileSync(file, fileContents, 'utf8')
+
+    configFiles.forEach((file, index) => {
+      const env = index === 0 ? 'dev' : 'master';
+      const contents = fileContents(env);
+      writeFileSync(file, contents, 'utf8')
       console.log(`Config file ${chalk.yellow(file)} written`)
     })
     return { spaceId, managementToken }
