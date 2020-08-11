@@ -1,4 +1,5 @@
 # Lubdhok Foundation Site
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dd7ce725-49c3-4df7-9ab8-9e488736c604/deploy-status)](https://app.netlify.com/sites/lubhdhok-foundation-dev/deploys)
 
 ## Tech Stack
 - [Gatsby](https://www.gatsbyjs.org/) with [React](https://reactjs.org/)
