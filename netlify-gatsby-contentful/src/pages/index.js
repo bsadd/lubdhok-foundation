@@ -10,7 +10,7 @@ import { getLayoutData } from '../utils/data'
 class HomePage extends React.Component {
   render() {
     const { siteTitle, logo, socialMediaLinks, navigationLink } = getLayoutData(this.props.data)
-    const homeSections = get(this, 'props.data.allContentfulHeroSection.edges')
+    const homeSections = get(this, 'props.data.allContentfulHomeSection.edges')
     const [heroContainer] = get(this,'props.data.allContentfulHeroContainer.edges')
 
     return (
@@ -77,7 +77,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulHeroSection(sort: { fields: [order], order: ASC }) {
+    allContentfulHomeSection(sort: { fields: [order], order: ASC }) {
       edges {
         node {
           title
