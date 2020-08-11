@@ -1,6 +1,9 @@
 # Lubdhok Foundation Site
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dd7ce725-49c3-4df7-9ab8-9e488736c604/deploy-status)](https://app.netlify.com/sites/lubhdhok-foundation-dev/deploys)
+
 ## Tech Stack
+
 - [Gatsby](https://www.gatsbyjs.org/) with [React](https://reactjs.org/)
 - [Contentful](https://www.contentful.com)
 - [Netlify](https://www.netlify.com)
@@ -19,6 +22,7 @@
   nvm install 10.22.0
   nvm use 10.22.0
 ```
+
 3. Install yarn (follow this [instruction](https://classic.yarnpkg.com/en/docs/install))
 
 ```bash
@@ -30,7 +34,7 @@
 1. Go to the directory
 
 ```bash
- cd netlify-gatsby-contentful 
+ cd netlify-gatsby-contentful
 ```
 
 2. Install packages
@@ -44,7 +48,9 @@
 ```json
 CONTENTFUL_SPACE_ID='<Get the spaceId from contentful Settings > API Keys > Content Delivery Token'
 CONTENTFUL_ACCESS_TOKEN='<Get the spaceId from contentful Settings > API Keys > Content Delivery Token>'
+CONTENTFUL_ENV='dev'
 ```
+
 4. Follow the commands
 
 ### `yarn run dev`
@@ -62,4 +68,3 @@ Run a production build into `./public` and publish the site to GitHub pages.
 ### `yarn run cleanup-repository`
 
 Removes all dependencies, scripts and data from the installation script.
-
