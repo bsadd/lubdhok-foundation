@@ -74,6 +74,11 @@ export const pageQuery = graphql`
           logoText
           logoLongText
           alt
+          image {
+            fluid {
+              src
+            }
+          }
         }
       }
     }

@@ -22,7 +22,7 @@ class GetInTouchPage extends React.Component {
             <div>
               <h3>Email</h3>
               <span>If you have any queries, drop an email to our admin {` `}
-                <a href="mailto:info@buetalumniaustralia.com" className={styles.adminEmail}>info@buetalumniaustralia.com</a>.
+                <a href="mailto:lubdhok.foundation@gmail.com" className={styles.adminEmail}>lubdhok.foundation@gmail.com</a>.
               </span>
               <br/>
               <span>We'll get back to you soon. </span>
