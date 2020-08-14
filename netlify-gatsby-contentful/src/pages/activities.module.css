@@ -1,0 +1,33 @@
+.activityPage {
+  padding: 0 30px;
+}
+
+.activityPage h3 {
+  font-size: 36px;
+  color: #a23c38;
+  padding: 20px 32px;
+  margin: 20px 0;
+  width: 100vw;
+  text-align: center;
+  margin-left: calc(-50vw + 50%);
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,.15);
+}
+
+.sticky {
+  position: sticky;
+  top: 80px;
+  left: calc(-50vw + 50%);
+  background: white;
+  z-index: 1;
+}
+
+.activityPage h2 {
+  font-size: 48px;
+  color: #a23c38;
+}
+
+@media(max-width: 600px) {
+  .activityPage h3 {
+    margin-left: calc(-50vw + 40%);
+  }
+}
