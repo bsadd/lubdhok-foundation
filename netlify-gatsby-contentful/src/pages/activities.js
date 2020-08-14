@@ -99,11 +99,12 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulNavigationLink(sort: { fields: [id], order: DESC }) {
+    allContentfulNavigationLink(sort: { fields: [id], order: ASC }) {
       edges {
         node {
           name
           url
+          id
           icon
         }
       }

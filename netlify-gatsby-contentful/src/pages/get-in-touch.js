@@ -49,11 +49,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulNavigationLink(sort: { fields: [id], order: DESC }) {
+    allContentfulNavigationLink(sort: { fields: [id], order: ASC }) {
       edges {
         node {
           name
           url
+          id
           icon
         }
       }
@@ -72,6 +73,11 @@ export const pageQuery = graphql`
           logoText
           logoLongText
           alt
+          image {
+            fluid {
+              src
+            }
+          }
         }
       }
     }
