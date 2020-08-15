@@ -6,7 +6,7 @@ import { getLayoutData } from '../utils/data';
 import { SocialMedialLinks } from '../components/SocialMediaLinks';
 import styles from './get-in-touch.module.css';
 
-class GetInTouchPage extends React.Component {
+class fourohfourPage extends React.Component {
   render() {
     const { siteTitle, logo, socialMediaLinks, navigationLink } = getLayoutData(this.props.data)
     return (
@@ -18,7 +18,7 @@ class GetInTouchPage extends React.Component {
         >
           <div className={styles.getInTouchPage}>
             <Helmet title={siteTitle} />
-            <h2>Get In Touch</h2>
+            <h3>This page is currently under development. Meanwhile, if you want to get in touch:</h3>
             <div>
               <h3>Email</h3>
               <span>If you have any queries, drop an email to our admin: {` `}
@@ -40,10 +40,10 @@ class GetInTouchPage extends React.Component {
   }
 }
 
-export default GetInTouchPage
+export default fourohfourPage
 
 export const pageQuery = graphql`
-  query GetInTouchQuery {
+  query fourohfourQuery {
     site {
       siteMetadata {
         title

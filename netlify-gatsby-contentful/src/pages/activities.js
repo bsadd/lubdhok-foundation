@@ -90,6 +90,11 @@ export const pageQuery = graphql`
           name
           date
           videoUrl
+          media {
+            fluid {
+              src
+            }
+          }
           venueText
           summary {
             childMarkdownRemark {
@@ -99,7 +104,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulNavigationLink(sort: { fields: [id], order: DESC }) {
+    allContentfulNavigationLink(sort: { fields: [id], order: ASC }) {
       edges {
         node {
           name

@@ -50,7 +50,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulNavigationLink(sort: { fields: [id], order: DESC }) {
+    allContentfulNavigationLink(sort: { fields: [id], order: ASC }) {
       edges {
         node {
           name
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
       }
     }
 
-    allContentfulSocialMedia {
+    allContentfulSocialMedia(sort: { fields: [key], order: ASC }) {
       edges {
         node {
           key
