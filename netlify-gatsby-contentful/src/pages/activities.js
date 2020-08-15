@@ -90,6 +90,11 @@ export const pageQuery = graphql`
           name
           date
           videoUrl
+          media {
+            fluid {
+              src
+            }
+          }
           venueText
           summary {
             childMarkdownRemark {

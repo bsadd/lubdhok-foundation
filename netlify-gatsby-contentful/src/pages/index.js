@@ -61,7 +61,7 @@ export const pageQuery = graphql`
       }
     }
 
-    allContentfulSocialMedia {
+    allContentfulSocialMedia(sort: { fields: [key], order: ASC }) {
       edges {
         node {
           key
