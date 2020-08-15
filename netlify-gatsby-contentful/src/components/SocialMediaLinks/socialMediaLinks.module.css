@@ -28,6 +28,9 @@
 .socialIcons.lg > a.linkedin {
   background: #0077b5;
 }
+.socialIcons.lg > a.twitter {
+  background: #00acee;
+}
 
 .socialIcons.lg > a > svg {
   color: #c1c1c1;
@@ -41,6 +44,9 @@
 }
 .socialIcons > a.linkedin:hover {
   background: #0077b5;
+}
+.socialIcons > a.twitter:hover {
+  background: #00acee;
 }
 
 .socialIcons > a:hover > svg {

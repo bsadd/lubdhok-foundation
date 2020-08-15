@@ -1,13 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faYoutube, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import styles from './socialMediaLinks.module.css';
 
 const socialIcons = {
   facebook: faFacebookF,
   youtube: faYoutube,
-  linkedin: faLinkedinIn
+  linkedin: faLinkedinIn,
+  twitter: faTwitter
 }
 const iconSize = {
   lg: '2x'
