@@ -14,19 +14,23 @@
 }
 
 .navigationLogo > div > a > img {
-  height: 80px;
-  width: 150px;
+  height: 50px;
+  width: 100px;
 }
 
 .navigationLogoText {
   display: flex;
   flex-direction: column;
-  font-size: 25px;
-  color: #a23c38;
-  border-left: 1px solid #a23c38;
+  font-size: 13px;
+  color: #d92027;
+  border-left: 1px solid #d92027;
   padding-left: 10px;
   margin-left: 10px;
-  line-height: 27px;
+  line-height: 16px;
+}
+
+.navigationLogoText > span:nth-child(2) {
+  color: black;
 }
 
 .lightLogoText {

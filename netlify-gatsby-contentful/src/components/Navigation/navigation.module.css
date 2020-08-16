@@ -52,7 +52,7 @@
 .navigationItem {
   display: inline-flex;
   align-items: center;
-  margin: 0 1em;
+  margin: 0 0.5em;
 }
 
 .navigationItem a {
@@ -111,7 +111,7 @@
   width: 30px;
   height: 45px;
   position: relative;
-  margin: 30px auto;
+  margin: 30px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
