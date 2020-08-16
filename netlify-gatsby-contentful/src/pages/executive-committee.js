@@ -37,8 +37,6 @@ class CommitteePage extends React.Component {
             <p>Serniabat Imam Hossain</p>
             <p>Sharif Yousuf</p>
             <p>Shuvro Chakrabarty</p>
-
-            
           </div>
         </Layout>
     )

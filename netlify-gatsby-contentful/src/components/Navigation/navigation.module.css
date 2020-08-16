@@ -52,7 +52,7 @@
 .navigationItem {
   display: inline-flex;
   align-items: center;
-  margin: 0 1em;
+  margin: 0 0.5em;
 }
 
 .navigationItem a {
