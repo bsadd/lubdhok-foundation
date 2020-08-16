@@ -30,7 +30,7 @@ class CommitteePage extends React.Component {
             <p>Afibuzzaman Anik</p>
             <p>Ashibul Hossain</p>
             <p>Avipriyo Chakrabarty</p>
-            <p>Farzana Sharmin Mimi</p>
+            <p>Farzana Sharmin</p>
             <p>Ibrahim Ahmed</p>
             <p>Md Ittkan Hossain</p>
             <p>Sabrina Sharmin</p>
