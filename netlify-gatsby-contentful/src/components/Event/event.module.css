@@ -1,6 +1,6 @@
 .eventHeader {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 10px;
 }
 
@@ -8,7 +8,6 @@
   font-size: 24px;
   color: #a23c38;
   padding-left: 10px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
