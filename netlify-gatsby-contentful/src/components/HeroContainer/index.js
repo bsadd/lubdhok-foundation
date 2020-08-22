@@ -20,7 +20,7 @@ export default ({ data }) => (
       </ScrollAnimation>
       <ScrollAnimation animateIn="zoomIn" animateOnce delay={500}>
         <div class="animated" style="animation-duration:1s;opacity:0">
-          <a class="heroContainer-module--heroBtn--3eCxJ" href="/activities">Activities</a>
+          <a class="heroContainer-module--heroBtn--3eCxJ" href="https://www.lubdhok07.org/activities">Activities</a>
         </div>
       </ScrollAnimation>
     </div>
