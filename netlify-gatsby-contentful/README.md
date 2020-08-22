@@ -43,11 +43,12 @@
   yarn
 ```
 
-3. Create a file `.env.development` and paste the following with proper `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN`
+3. Create a file `.env.development` and paste the following with proper `CONTENTFUL_SPACE_ID`,  `CONTENTFUL_ACCESS_TOKEN` and `CONTENTFUL_MANAGEMENT_TOKEN`
 
 ```json
 CONTENTFUL_SPACE_ID='<Get the spaceId from contentful Settings > API Keys > Content Delivery Token'
 CONTENTFUL_ACCESS_TOKEN='<Get the spaceId from contentful Settings > API Keys > Content Delivery Token>'
+CONTENTFUL_MANAGEMENT_TOKEN='<Get management token from Settings > API Keys > Content Management Token'
 CONTENTFUL_ENV='dev'
 ```
 
@@ -61,10 +62,29 @@ Run in the project locally and visit http://localhost:8000
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
 
-### `yarn run deploy`
+## Import-Export Contentful Data
 
-Run a production build into `./public` and publish the site to GitHub pages.
+To export dev environment data
 
-### `yarn run cleanup-repository`
+```bash
+  yarn run export:dev
+```
 
-Removes all dependencies, scripts and data from the installation script.
+To export master environment data
+
+```bash
+  yarn run export:master
+```
+
+To import dev environment data
+
+```bash
+  yarn run import:dev --filename=<name of the file you want to import>
+```
+
+To import master environment data.
+<strong style="color: red"> BE CAREFUL WHILE RUNNING THIS SCRIPT. IT WILL OVERWRITE ALL THE MASTER CONTENTS</strong>
+
+```bash
+  yarn run import:master --filename=<name of the file you want to import>
+```
