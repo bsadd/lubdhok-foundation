@@ -18,11 +18,7 @@ export default ({ data }) => (
       <ScrollAnimation animateIn="zoomIn" animateOnce delay={500}>
         <p>{data.shortDescription}</p>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="bounceIn" animateOnce delay={1000}>
-        <Link className={styles.heroBtn} to="/member-register">
-          Become a member
-        </Link>
-      </ScrollAnimation>
+      
     </div>
   </div>
 );
