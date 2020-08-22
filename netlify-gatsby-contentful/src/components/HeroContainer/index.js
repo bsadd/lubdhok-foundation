@@ -19,9 +19,7 @@ export default ({ data }) => (
         <p>{data.shortDescription}</p>
       </ScrollAnimation>
       <ScrollAnimation animateIn="zoomIn" animateOnce delay={500}>
-        <div class="animated" style="animation-duration:1s;opacity:0">
           <a class="heroBtn" href="/activities">Activities</a>
-        </div>
       </ScrollAnimation>
     </div>
   </div>
