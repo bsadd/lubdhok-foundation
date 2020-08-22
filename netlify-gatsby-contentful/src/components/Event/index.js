@@ -1,14 +1,14 @@
-import React from 'react'
-import get from 'lodash/get'
-import DateComponent from '../DateComponent'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-import { getNumberOfDaysToGo } from '../../utils/date'
+import React from 'react';
+import get from 'lodash/get';
+import DateComponent from '../DateComponent';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { getNumberOfDaysToGo } from '../../utils/date';
 
-import styles from './event.module.css'
+import styles from './event.module.css';
 
 export default ({ event }) => {
-  const imageSrc = get(event, 'media.fluid.src')
+  const imageSrc = get(event, 'media.fluid.src');
   return (
     <>
       <div className={styles.eventHeader}>
@@ -49,5 +49,5 @@ export default ({ event }) => {
         ) : null}
       </div>
     </>
-  )
-}
+  );
+};

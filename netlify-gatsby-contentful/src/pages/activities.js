@@ -1,27 +1,27 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
-import Layout from '../components/Layout'
-import Event from '../components/Event'
-import { getLayoutData } from '../utils/data'
-import styles from './activities.module.css'
+import React from 'react';
+import { graphql } from 'gatsby';
+import get from 'lodash/get';
+import Helmet from 'react-helmet';
+import Layout from '../components/Layout';
+import Event from '../components/Event';
+import { getLayoutData } from '../utils/data';
+import styles from './activities.module.css';
 
 class ActivityPage extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       activityByYear: {},
-    }
+    };
   }
   componentDidMount() {
-    const activities = get(this, 'props.data.allContentfulActivity.edges')
-    this.setActivityByYear(activities)
+    const activities = get(this, 'props.data.allContentfulActivity.edges');
+    this.setActivityByYear(activities);
   }
 
   setActivityByYear(activities) {
     const activityByYear = {};
-    activities.map (({ node }) => {
+    activities.map(({ node }) => {
       const date = new Date(node.date);
       const year = date.getFullYear();
       if (!activityByYear[year]) {
@@ -32,50 +32,43 @@ class ActivityPage extends React.Component {
     });
     this.setState({
       activityByYear,
-    })
+    });
   }
   render() {
-    const { siteTitle, logo, socialMediaLinks, navigationLink } = getLayoutData(this.props.data)
+    const { siteTitle, logo, socialMediaLinks, navigationLink } = getLayoutData(
+      this.props.data
+    );
     const { activityByYear } = this.state;
     return (
-        <Layout
-          location={this.props.location}
-          logo={logo}
-          navigationLink={navigationLink}
-          socialMediaLinks={socialMediaLinks}
-        >
-          <div className={styles.activityPage}>
-            <Helmet title={siteTitle} />
+      <Layout
+        location={this.props.location}
+        logo={logo}
+        navigationLink={navigationLink}
+        socialMediaLinks={socialMediaLinks}
+      >
+        <div className={styles.activityPage}>
+          <Helmet title={siteTitle} />
 
-            <h2>Activities</h2>
-            {
-              Object.keys(activityByYear).sort((a, b)=> b - a).map((year, index) => {
-                return (
-                  <>
-                    <h3
-                      className={styles.sticky}
-                    >
-                      {year}
-                    </h3>
-                    {
-                      activityByYear[year].map((activity, index) => (
-                        <Event
-                          key={index}
-                          event={activity}
-                        />
-                      ))
-                    }
-                  </>
-                );
-              })
-            }
-          </div>
-        </Layout>
-    )
+          <h2>Activities</h2>
+          {Object.keys(activityByYear)
+            .sort((a, b) => b - a)
+            .map((year, index) => {
+              return (
+                <>
+                  <h3 className={styles.sticky}>{year}</h3>
+                  {activityByYear[year].map((activity, index) => (
+                    <Event key={index} event={activity} />
+                  ))}
+                </>
+              );
+            })}
+        </div>
+      </Layout>
+    );
   }
 }
 
-export default ActivityPage
+export default ActivityPage;
 
 export const pageQuery = graphql`
   query ActivityQuery {
@@ -136,4 +129,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

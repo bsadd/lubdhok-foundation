@@ -1,7 +1,7 @@
-import React, { useState, useCallback } from "react";
-import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
-import { photos } from "./photos";
+import React, { useState, useCallback } from 'react';
+import Gallery from 'react-photo-gallery';
+import Carousel, { Modal, ModalGateway } from 'react-images';
+import { photos } from './photos';
 
 function PhotoGallery() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -28,7 +28,7 @@ function PhotoGallery() {
               views={photos.map(x => ({
                 ...x,
                 srcset: x.srcSet,
-                caption: x.title
+                caption: x.title,
               }))}
             />
           </Modal>
@@ -38,4 +38,4 @@ function PhotoGallery() {
   );
 }
 
-export default PhotoGallery
+export default PhotoGallery;
