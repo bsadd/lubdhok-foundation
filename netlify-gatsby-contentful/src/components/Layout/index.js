@@ -10,13 +10,11 @@ import 'animate.css/animate.min.css';
 
 const Layout = ({ children, logo, navigationLink, socialMediaLinks }) => {
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      if (!window.GA_INITIALIZED) {
-        initGA();
-        window.GA_INITIALIZED = true;
-      }
-      logPageView();
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
     }
+    logPageView();
   }, []);
 
   if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
