@@ -18,7 +18,12 @@ export default ({ data }) => (
       <ScrollAnimation animateIn="zoomIn" animateOnce delay={500}>
         <p>{data.shortDescription}</p>
       </ScrollAnimation>
-      
+      </ScrollAnimation>
+      <ScrollAnimation animateIn="zoomIn" animateOnce delay={500}>
+        <div class="animated" style="animation-duration:1s;opacity:0">
+          <a class="heroContainer-module--heroBtn--3eCxJ" href="/activities">Activities</a>
+        </div>
+      </ScrollAnimation>
     </div>
   </div>
 );
