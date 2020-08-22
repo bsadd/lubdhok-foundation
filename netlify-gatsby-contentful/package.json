@@ -30,6 +30,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "chalk": "^2.4.2",
+    "contentful-export": "^7.10.7",
     "contentful-import": "^7.4.3",
     "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
@@ -39,6 +40,7 @@
     "inquirer": "^6.2.2",
     "prettier": "^1.17.0",
     "rimraf": "^2.6.3",
+    "yargs": "^15.4.1",
     "yargs-parser": "^13.0.0"
   },
   "homepage": "https://github.com/bsadd/lubdhok-foundation",
@@ -57,14 +59,14 @@
     "develop": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md' 'bin/*.js'",
+    "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/*.js' 'src/**/*.md' 'bin/*.js'",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix *.js bin/*.js",
-    "postinstall": "node ./bin/hello.js",
-    "setup": "node ./bin/setup.js",
     "start": "npm run develop",
-    "heroku-postbuild": "gatsby build",
-    "cleanup-repository": "rimraf bin contentful && yarn remove contentful-import chalk inquirer rimraf "
+    "export:dev": "node ./scripts/contentful/export.js --env=dev",
+    "export:master": "node ./scripts/contentful/export.js --env=master",
+    "import:dev": "node ./scripts/contentful/import.js --env=dev",
+    "import:master": "node ./scripts/contentful/import.js --env=master"
   }
 }

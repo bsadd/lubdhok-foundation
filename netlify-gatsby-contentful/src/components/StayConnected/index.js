@@ -10,4 +10,4 @@ export default ({ socialMediaLinks }) => (
       <SocialMedialLinks socialMediaLinks={socialMediaLinks} />
     </div>
   </div>
-)
+);

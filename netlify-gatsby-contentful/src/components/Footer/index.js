@@ -1,6 +1,6 @@
-import React from 'react'
-import Logo from '../Logo'
-import StayConnected from '../StayConnected'
+import React from 'react';
+import Logo from '../Logo';
+import StayConnected from '../StayConnected';
 
 import styles from './footer.module.css';
 
@@ -13,6 +13,6 @@ const Footer = ({ logo, socialMediaLinks }) => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

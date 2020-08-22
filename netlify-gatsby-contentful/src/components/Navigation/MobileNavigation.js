@@ -1,18 +1,23 @@
-import React, { useState , useEffect } from 'react'
-import { Link } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBlog, faPhone, faCalendarAlt, faPeopleCarry } from '@fortawesome/free-solid-svg-icons'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBlog,
+  faPhone,
+  faCalendarAlt,
+  faPeopleCarry,
+} from '@fortawesome/free-solid-svg-icons';
 
-import styles from './navigation.module.css'
+import styles from './navigation.module.css';
 
 const navIcons = {
   event: faCalendarAlt,
   workshop: faBlog,
   contact: faPhone,
-  member: faPeopleCarry
-}
+  member: faPeopleCarry,
+};
 
-const HamburgerIcon = ({open, onClick}) => (
+const HamburgerIcon = ({ open, onClick }) => (
   <div
     role="button"
     onClick={onClick}
@@ -25,7 +30,7 @@ const HamburgerIcon = ({open, onClick}) => (
     <span></span>
     <span></span>
     <span></span>
-</div>
+  </div>
 );
 
 export default ({ navigationLink }) => {
@@ -33,7 +38,7 @@ export default ({ navigationLink }) => {
   useEffect(() => {
     return () => {
       document.body.style.overflow = 'auto';
-    }
+    };
   }, []);
   const handleClick = () => {
     if (open) {
@@ -42,28 +47,22 @@ export default ({ navigationLink }) => {
       document.body.style.overflow = 'hidden';
     }
     setOpen(!open);
-  }
+  };
   return (
     <nav role="navigation" className={styles.mobNav}>
-      <HamburgerIcon
-        open={open}
-        onClick={handleClick}
-      />
-      { open ?
+      <HamburgerIcon open={open} onClick={handleClick} />
+      {open ? (
         <ul>
-           {
-             navigationLink.map(({ node }, index) => (
-              <li key={index}>
-                 <Link to={node.url}>
-                   <FontAwesomeIcon icon={navIcons[node.icon]} />
-                   {node.name}
-                 </Link>
-              </li>
-             ))
-           }
+          {navigationLink.map(({ node }, index) => (
+            <li key={index}>
+              <Link to={node.url}>
+                <FontAwesomeIcon icon={navIcons[node.icon]} />
+                {node.name}
+              </Link>
+            </li>
+          ))}
         </ul>
-        : null
-      }
+      ) : null}
     </nav>
-  )
-}
+  );
+};
