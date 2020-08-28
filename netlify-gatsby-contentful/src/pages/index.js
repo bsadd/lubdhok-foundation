@@ -4,6 +4,8 @@ import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import Hero from '../components/HeroContainer';
 import Layout from '../components/Layout';
+import { LatestNews } from '../components/LatestNews';
+import { ActivityTimeline } from '../components/ActivityTimeline';
 import HomeSection from '../components/HomeSection';
 import { getLayoutData } from '../utils/data';
 
@@ -27,6 +29,7 @@ class HomePage extends React.Component {
       >
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
+          <LatestNews />
           <Hero data={heroContainer.node} />
           {homeSections.map(({ node }, index) => {
             return (
@@ -38,6 +41,7 @@ class HomePage extends React.Component {
               />
             );
           })}
+          <ActivityTimeline />
         </div>
       </Layout>
     );

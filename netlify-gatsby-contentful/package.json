@@ -26,6 +26,7 @@
     "react-helmet": "^5.2.0",
     "react-images": "^1.1.7",
     "react-photo-gallery": "^8.0.0",
+    "react-vertical-timeline-component": "^3.0.2",
     "sharp": "^0.22.0"
   },
   "devDependencies": {
