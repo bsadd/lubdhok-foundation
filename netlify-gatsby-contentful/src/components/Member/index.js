@@ -5,7 +5,7 @@ import styles from './member.module.css';
 
 export default ({ member, reverse }) => {
   const imageSrc =
-    get(member, 'displayPicture.fluid.src') ||
+    get(member, 'photo.fluid.src') ||
     'https://www.cobdoglaps.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg';
   return (
     <ScrollAnimation
@@ -18,14 +18,23 @@ export default ({ member, reverse }) => {
         className={`${styles.memberContainer} ${reverse ? styles.reverse : ''}`}
       >
         <div className={styles.memberProfilePic}>
-          <img src={imageSrc} alt={member.fullName} />
+          <img src={imageSrc} alt={member.name} />
         </div>
         <div
-          className={`${styles.memberDetails} ${reverse ? styles.reverse : ''}`}
+          className={`${styles.memberInfo} ${reverse ? styles.reverse : ''}`}
         >
-          <div className={styles.name}>{member.fullName}</div>
-          <div className={styles.position}>{member.position}</div>
-          <div>Member No {member.memberNo}</div>
+          <div className={styles.name}>{member.name}</div>
+          <div className={styles.position}>{member.title}</div>
+           {
+             member.details && member.details.childMarkdownRemark &&
+             <div
+             className={`${styles.details} ${reverse ? styles.reverse : ''}`}
+              dangerouslySetInnerHTML={{
+                __html: member.details.childMarkdownRemark.html,
+              }}
+            />
+
+           }
         </div>
       </div>
     </ScrollAnimation>
