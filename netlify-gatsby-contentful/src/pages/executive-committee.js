@@ -62,7 +62,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulNavigationLink(sort: { fields: [id], order: DESC }) {
+    allContentfulNavigationLink(sort: { fields: [order], order: DESC }) {
       edges {
         node {
           name
