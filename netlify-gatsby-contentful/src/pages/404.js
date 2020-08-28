@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
 import { SocialMedialLinks } from '../components/SocialMediaLinks';
@@ -33,7 +34,7 @@ class fourohfourPage extends React.Component {
           </div>
           <div>
             <h3>Join us and stay connected</h3>
-            <SocialMedialLinks size="lg" socialMediaLinks={socialMediaLinks} />
+            <SocialMedialLinks size="lg"/>
           </div>
         </div>
       </Layout>
