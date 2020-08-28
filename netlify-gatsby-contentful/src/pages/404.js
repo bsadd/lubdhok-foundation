@@ -58,7 +58,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulNavigationLink(sort: { fields: [id], order: ASC }) {
+    allContentfulNavigationLink(sort: { fields: [order], order: ASC }) {
       edges {
         node {
           name

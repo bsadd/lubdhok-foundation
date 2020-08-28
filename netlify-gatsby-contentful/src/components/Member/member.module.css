@@ -17,7 +17,7 @@
 .memberProfilePic img {
   height: 200px;
   width: 200px;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .memberInfo {
