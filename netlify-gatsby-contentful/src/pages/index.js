@@ -7,26 +7,18 @@ import Layout from '../components/Layout';
 import { LatestNews } from '../components/LatestNews';
 import { ActivityTimeline } from '../components/ActivityTimeline';
 import HomeSection from '../components/HomeSection';
-import { getLayoutData } from '../utils/data';
 
 class HomePage extends React.Component {
   render() {
-    const { siteTitle, logo, socialMediaLinks, navigationLink } = getLayoutData(
-      this.props.data
-    );
-    const homeSections = get(this, 'props.data.allContentfulHomeSection.edges');
+    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
+    const homeSections = get(this.props.data, 'allContentfulHomeSection.edges');
     const [heroContainer] = get(
-      this,
-      'props.data.allContentfulHeroContainer.edges'
+      this.props.data,
+      'allContentfulHeroContainer.edges'
     );
 
     return (
-      <Layout
-        location={this.props.location}
-        logo={logo}
-        navigationLink={navigationLink}
-        socialMediaLinks={socialMediaLinks}
-      >
+      <Layout>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <LatestNews />
@@ -55,38 +47,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allContentfulNavigationLink(sort: { fields: [order], order: ASC }) {
-      edges {
-        node {
-          name
-          url
-          icon
-        }
-      }
-    }
-
-    allContentfulSocialMedia(sort: { fields: [key], order: ASC }) {
-      edges {
-        node {
-          key
-          url
-        }
-      }
-    }
-    allContentfulLogo {
-      edges {
-        node {
-          logoText
-          logoLongText
-          alt
-          image {
-            fluid {
-              src
-            }
-          }
-        }
       }
     }
     allContentfulHomeSection(sort: { fields: [order], order: ASC }) {

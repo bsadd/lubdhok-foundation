@@ -2,22 +2,14 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
-import { getLayoutData } from '../utils/data';
 import { SocialMedialLinks } from '../components/SocialMediaLinks';
 import styles from './get-in-touch.module.css';
 
 class GetInTouchPage extends React.Component {
   render() {
-    const { siteTitle, logo, socialMediaLinks, navigationLink } = getLayoutData(
-      this.props.data
-    );
+    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
     return (
-      <Layout
-        location={this.props.location}
-        logo={logo}
-        navigationLink={navigationLink}
-        socialMediaLinks={socialMediaLinks}
-      >
+      <Layout>
         <div className={styles.getInTouchPage}>
           <Helmet title={siteTitle} />
           <h2>Get In Touch</h2>
@@ -38,7 +30,7 @@ class GetInTouchPage extends React.Component {
           </div>
           <div>
             <h3>Join us and stay connected</h3>
-            <SocialMedialLinks size="lg" socialMediaLinks={socialMediaLinks} />
+            <SocialMedialLinks size="lg" />
           </div>
         </div>
       </Layout>
@@ -53,37 +45,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allContentfulNavigationLink(sort: { fields: [order], order: ASC }) {
-      edges {
-        node {
-          name
-          url
-          icon
-        }
-      }
-    }
-    allContentfulSocialMedia {
-      edges {
-        node {
-          key
-          url
-        }
-      }
-    }
-    allContentfulLogo {
-      edges {
-        node {
-          logoText
-          logoLongText
-          alt
-          image {
-            fluid {
-              src
-            }
-          }
-        }
       }
     }
   }

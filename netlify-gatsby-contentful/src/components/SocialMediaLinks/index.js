@@ -6,6 +6,7 @@ import {
   faLinkedinIn,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import { useSocialMedia } from './query';
 
 import styles from './socialMediaLinks.module.css';
 
@@ -19,7 +20,9 @@ const iconSize = {
   lg: '2x',
 };
 
-export const SocialMedialLinks = ({ socialMediaLinks, size = 'sm' }) => (
+export const SocialMedialLinks = ({ size = 'sm' }) => {
+  const socialMediaLinks = useSocialMedia();
+  return (
   <div className={`${styles.socialIcons} ${styles[size]}`}>
     {socialMediaLinks.map(({ node }, index) => (
       <a
@@ -34,3 +37,4 @@ export const SocialMedialLinks = ({ socialMediaLinks, size = 'sm' }) => (
     ))}
   </div>
 );
+}

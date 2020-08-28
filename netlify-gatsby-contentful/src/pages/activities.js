@@ -4,7 +4,6 @@ import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
 import Event from '../components/Event';
-import { getLayoutData } from '../utils/data';
 import styles from './activities.module.css';
 
 class ActivityPage extends React.Component {
@@ -35,17 +34,10 @@ class ActivityPage extends React.Component {
     });
   }
   render() {
-    const { siteTitle, logo, socialMediaLinks, navigationLink } = getLayoutData(
-      this.props.data
-    );
+    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
     const { activityByYear } = this.state;
     return (
-      <Layout
-        location={this.props.location}
-        logo={logo}
-        navigationLink={navigationLink}
-        socialMediaLinks={socialMediaLinks}
-      >
+      <Layout>
         <div className={styles.activityPage}>
           <Helmet title={siteTitle} />
 
@@ -94,37 +86,6 @@ export const pageQuery = graphql`
               html
             }
           }
-        }
-      }
-    }
-    allContentfulNavigationLink(sort: { fields: [order], order: ASC }) {
-      edges {
-        node {
-          name
-          url
-          icon
-        }
-      }
-    }
-    allContentfulSocialMedia {
-      edges {
-        node {
-          key
-          url
-        }
-      }
-    }
-    allContentfulLogo {
-      edges {
-        node {
-          logoText
-          logoLongText
-          image {
-            fluid {
-              src
-            }
-          }
-          alt
         }
       }
     }

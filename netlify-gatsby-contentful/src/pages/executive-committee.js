@@ -4,23 +4,15 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
 import Member from '../components/Member';
-import { getLayoutData } from '../utils/data';
 import styles from './executive-committee.module.css';
 
 class CommitteePage extends React.Component {
   render() {
-    const { siteTitle, logo, socialMediaLinks, navigationLink } = getLayoutData(
-      this.props.data
-    );
-    const members = get(this, 'props.data.allContentfulCommittee.edges');
+    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
+    const members = get(this.props.data, 'allContentfulCommittee.edges');
 
     return (
-      <Layout
-        location={this.props.location}
-        logo={logo}
-        navigationLink={navigationLink}
-        socialMediaLinks={socialMediaLinks}
-      >
+      <Layout>
         <div className={styles.committeePage}>
           <Helmet title={siteTitle} />
 
@@ -59,37 +51,6 @@ export const pageQuery = graphql`
               src
             }
           }
-        }
-      }
-    }
-    allContentfulNavigationLink(sort: { fields: [order], order: ASC }) {
-      edges {
-        node {
-          name
-          url
-          icon
-        }
-      }
-    }
-    allContentfulSocialMedia {
-      edges {
-        node {
-          key
-          url
-        }
-      }
-    }
-    allContentfulLogo {
-      edges {
-        node {
-          logoText
-          logoLongText
-          image {
-            fluid {
-              src
-            }
-          }
-          alt
         }
       }
     }

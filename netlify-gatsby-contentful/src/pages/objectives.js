@@ -3,26 +3,14 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
-import Event from '../components/Event';
-import { getLayoutData } from '../utils/data';
 import styles from './objectives.module.css';
 
 class ObjectivesPage extends React.Component {
   render() {
-    const { siteTitle, logo, socialMediaLinks, navigationLink } = getLayoutData(
-      this.props.data
-    );
-    const objectivesSections = get(
-      this,
-      'props.data.allContentfulHomeSection.edges'
-    );
+    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
+  
     return (
-      <Layout
-        location={this.props.location}
-        logo={logo}
-        navigationLink={navigationLink}
-        socialMediaLinks={socialMediaLinks}
-      >
+      <Layout>
         <div className={styles.objectivesPage}>
           <Helmet title={siteTitle} />
 
@@ -60,38 +48,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-
-    allContentfulNavigationLink(sort: { fields: [order], order: ASC }) {
-      edges {
-        node {
-          name
-          url
-          icon
-        }
-      }
-    }
-    allContentfulSocialMedia {
-      edges {
-        node {
-          key
-          url
-        }
-      }
-    }
-    allContentfulLogo {
-      edges {
-        node {
-          logoText
-          logoLongText
-          image {
-            fluid {
-              src
-            }
-          }
-          alt
-        }
       }
     }
   }
