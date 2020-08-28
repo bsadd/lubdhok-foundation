@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 export const query = graphql`
   query {
-    allContentfulActivity(sort: { fields: [date], order: DESC }, limit: 1) {
+    allContentfulActivity(sort: { fields: [date], order: DESC }, limit: 2) {
       edges {
         node {
           name
