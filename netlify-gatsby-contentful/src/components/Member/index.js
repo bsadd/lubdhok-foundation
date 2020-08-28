@@ -25,16 +25,14 @@ export default ({ member, reverse }) => {
         >
           <div className={styles.name}>{member.name}</div>
           <div className={styles.position}>{member.title}</div>
-           {
-             member.details && member.details.childMarkdownRemark &&
-             <div
-             className={`${styles.details} ${reverse ? styles.reverse : ''}`}
+          {member.details && member.details.childMarkdownRemark && (
+            <div
+              className={`${styles.details} ${reverse ? styles.reverse : ''}`}
               dangerouslySetInnerHTML={{
                 __html: member.details.childMarkdownRemark.html,
               }}
             />
-
-           }
+          )}
         </div>
       </div>
     </ScrollAnimation>

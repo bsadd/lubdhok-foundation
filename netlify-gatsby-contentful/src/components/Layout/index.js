@@ -3,12 +3,19 @@ import Container from '../Container';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
 import { initGA, logPageView } from '../../utils/analytics';
+import { useLogo } from './query/logoQuery';
+import { useNavigationLink } from './query/navigationQuery';
+import { useSocialMedia } from './query/socialMediaQuery';
 
 import styles from './layout.module.css';
 import './base.css';
 import 'animate.css/animate.min.css';
 
-const Layout = ({ children, logo, navigationLink, socialMediaLinks }) => {
+const Layout = ({ children }) => {
+  const logo = useLogo();
+  const navigationLink = useNavigationLink();
+  const socialMediaLinks = useSocialMedia();
+
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
       initGA();
