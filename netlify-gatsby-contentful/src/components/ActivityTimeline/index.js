@@ -36,9 +36,7 @@ export const ActivityTimeline = () => {
         ))}
       </VerticalTimeline>
       <div className={styles.seeMoreBtn}>
-        <Link to="/activities">
-          See more activites
-        </Link>
+        <Link to="/activities">See more activites</Link>
       </div>
     </>
   );

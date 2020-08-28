@@ -19,9 +19,9 @@ export default ({ data }) => (
         <p>{data.shortDescription}</p>
       </ScrollAnimation>
       <ScrollAnimation animateIn="zoomIn" animateOnce delay={500}>
-          <Link className={styles.heroBtn} to="/donate">
-            Donate
-          </Link>
+        <Link className={styles.heroBtn} to="/donate">
+          Donate
+        </Link>
       </ScrollAnimation>
     </div>
   </div>

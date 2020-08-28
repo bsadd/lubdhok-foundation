@@ -23,18 +23,18 @@ const iconSize = {
 export const SocialMedialLinks = ({ size = 'sm' }) => {
   const socialMediaLinks = useSocialMedia();
   return (
-  <div className={`${styles.socialIcons} ${styles[size]}`}>
-    {socialMediaLinks.map(({ node }, index) => (
-      <a
-        key={index}
-        className={styles[node.key]}
-        href={node.url}
-        target="_black"
-        rel="noopener"
-      >
-        <FontAwesomeIcon size={iconSize[size]} icon={socialIcons[node.key]} />
-      </a>
-    ))}
-  </div>
-);
-}
+    <div className={`${styles.socialIcons} ${styles[size]}`}>
+      {socialMediaLinks.map(({ node }, index) => (
+        <a
+          key={index}
+          className={styles[node.key]}
+          href={node.url}
+          target="_black"
+          rel="noopener"
+        >
+          <FontAwesomeIcon size={iconSize[size]} icon={socialIcons[node.key]} />
+        </a>
+      ))}
+    </div>
+  );
+};

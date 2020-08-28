@@ -7,7 +7,9 @@ export const getNumberOfDaysToGo = firstDate => {
   return `${diffDays} ${diffDays == 1 ? 'day' : 'days'} to go`;
 };
 
-export const defaultDateFormat = (ISOdate) => {
+export const defaultDateFormat = ISOdate => {
   const date = new Date(ISOdate);
-  return `${date.getDate()} ${date.toLocaleString('default', { month: 'short' })}, ${date.getFullYear()}`;
+  return `${date.getDate()} ${date.toLocaleString('default', {
+    month: 'short',
+  })}, ${date.getFullYear()}`;
 };
