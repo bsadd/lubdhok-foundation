@@ -1,5 +1,6 @@
 .activityPage {
   padding: 0 30px;
+  overflow-x: hidden;
 }
 
 .activityPage h3 {

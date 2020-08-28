@@ -13,7 +13,7 @@ class CommitteePage extends React.Component {
       this.props.data
     );
     const members = get(this, 'props.data.allContentfulCommittee.edges');
-    console.log(members);
+
     return (
       <Layout
         location={this.props.location}
