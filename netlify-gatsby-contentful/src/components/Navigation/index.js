@@ -6,12 +6,12 @@ import { useMedia } from '../../hooks/useMedia';
 import Logo from '../Logo';
 
 export default ({ logo, navigationLink }) => {
-  const { tab } = useMedia();
+  const { tab, mobile } = useMedia();
   return (
     <nav role="navigation" className={styles.sticky}>
       <div className={styles.navigation}>
         <Logo logo={logo} />
-        {tab ? (
+        {tab || mobile ? (
           <MobileNavigation navigationLink={navigationLink} />
         ) : (
           <DesktopNavigation navigationLink={navigationLink} />
