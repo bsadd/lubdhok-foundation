@@ -1,23 +1,28 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import { useActivityTimelineData } from './query';
 import { defaultDateFormat } from '../../utils/date';
+import { useMedia } from '../../hooks/useMedia';
 
 import 'react-vertical-timeline-component/style.min.css';
 import styles from './activityTimeline.module.css';
 
 export const ActivityTimeline = () => {
   const activities = useActivityTimelineData();
+  const { tab, mobile } = useMedia();
+  const isLessThanTab = tab || mobile;
 
   if (!activities.length) {
     return null;
   }
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.title}>Recent activites</div>
       <VerticalTimeline className={styles.activityTimline}>
         {activities.map(({ node: activity }) => (
@@ -36,8 +41,14 @@ export const ActivityTimeline = () => {
         ))}
       </VerticalTimeline>
       <div className={styles.seeMoreBtn}>
-        <Link to="/activities">See more activites</Link>
+        <Link to="/activities">
+          {
+            isLessThanTab ?
+            <FontAwesomeIcon icon={faCalendarAlt} />
+            : <span>See more</span>
+          }
+        </Link>
       </div>
-    </>
+    </div>
   );
 };
