@@ -16,7 +16,6 @@ const HeroContainer = () => {
     backgroundSize: 'auto',
     height: '350px',
     backgroundPosition: 'center',
-    backgroundColor: '#d3570f',
     filter: 'grayscale(100%)',
   };
 
