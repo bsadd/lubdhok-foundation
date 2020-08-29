@@ -10,7 +10,7 @@ export default ({ logo, navigationLink }) => {
   return (
     <nav role="navigation" className={styles.sticky}>
       <div className={styles.navigation}>
-        <Logo logo={logo} />
+        <Logo logo={logo} lightMode={mobile} />
         {tab || mobile ? (
           <MobileNavigation navigationLink={navigationLink} />
         ) : (

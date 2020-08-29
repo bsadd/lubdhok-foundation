@@ -22,9 +22,3 @@
   font-size: 48px;
   color: #a23c38;
 }
-
-@media(max-width: 600px) {
-  .activityPage h3 {
-    margin-left: calc(-50vw + 40%);
-  }
-}

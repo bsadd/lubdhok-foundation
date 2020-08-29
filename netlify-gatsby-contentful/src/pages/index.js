@@ -12,17 +12,13 @@ class HomePage extends React.Component {
   render() {
     const siteTitle = get(this.props.data, 'site.siteMetadata.title');
     const homeSections = get(this.props.data, 'allContentfulHomeSection.edges');
-    const [heroContainer] = get(
-      this.props.data,
-      'allContentfulHeroContainer.edges'
-    );
 
     return (
       <Layout>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <LatestNews />
-          <Hero data={heroContainer.node} />
+          <Hero />
           {homeSections.map(({ node }, index) => {
             return (
               <HomeSection
@@ -56,24 +52,6 @@ export const pageQuery = graphql`
           description {
             childMarkdownRemark {
               html
-            }
-          }
-        }
-      }
-    }
-    allContentfulHeroContainer {
-      edges {
-        node {
-          title
-          shortDescription
-          backgroundImage {
-            fluid(
-              maxWidth: 1680
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }

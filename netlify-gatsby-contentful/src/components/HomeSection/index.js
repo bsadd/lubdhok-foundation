@@ -6,6 +6,7 @@ export default ({ title, description, reverse }) => (
   <div className={`${styles.homeSection} ${reverse ? styles.reverse : ''}`}>
     <ScrollAnimation
       animateIn={reverse ? 'slideInRight' : 'slideInLeft'}
+      animateOnce
       delay={200}
       className={styles.homeSectionTitle}
     >
@@ -13,6 +14,7 @@ export default ({ title, description, reverse }) => (
     </ScrollAnimation>
     <ScrollAnimation
       animateIn="fadeIn"
+      animateOnce
       delay={200}
       className={styles.homeSectionDescription}
     >
