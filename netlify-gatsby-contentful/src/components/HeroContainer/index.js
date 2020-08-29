@@ -6,7 +6,7 @@ import styles from './heroContainer.module.css';
 
 const HeroContainer = () => {
   const data = useHeroContainerData();
-  console.log(data, 'data');
+
   if (!data) {
     return null;
   }

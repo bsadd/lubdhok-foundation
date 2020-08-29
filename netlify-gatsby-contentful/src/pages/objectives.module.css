@@ -13,14 +13,6 @@
   box-shadow: 0px 1px 2px 1px rgba(0,0,0,.15);
 }
 
-.sticky {
-  position: sticky;
-  top: 80px;
-  left: calc(-50vw + 50%);
-  background: white;
-  z-index: 1;
-}
-
 .objectivesPage h2 {
   font-size: 48px;
   color: #a23c38;
@@ -37,12 +29,11 @@
 }
 
 .objectivesPage p {
-  font-size: 20px;
+  font-size: 16px;
   color: #000000;
+  margin: 0;
 }
 
-@media(max-width: 600px) {
-  .objectivesPage h3 {
-    margin-left: calc(-50vw + 40%);
-  }
+.objectivesPage ul {
+  margin-bottom: 48px;
 }
