@@ -1,5 +1,6 @@
 .committeePage {
   padding: 0 30px;
+  overflow: hidden;
 }
 
 .committeePage h3 {
