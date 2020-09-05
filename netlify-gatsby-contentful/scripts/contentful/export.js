@@ -28,4 +28,5 @@ contentfulExport(options)
   })
   .catch((err) => {
     console.log('Oh no! Some errors occurred!', JSON.stringify(err))
-  })
+  });
+  

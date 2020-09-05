@@ -19,7 +19,12 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Lubdhok',
+    title: 'Lubdhok Foundation',
+    description: "A platform for BUET'07 to serve community",
+    keywords: ['Lubdhok', 'Foundation', 'Lubdhok foundation', 'Donation', 'Community', 'Lubdhok community'],
+    siteUrl: 'https://www.lubdhok07.org/',
+    image: 'site_preview.jpg',
+    author: '@Lubdhok07found1'
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -27,9 +32,10 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
-    }
-  ],
+    },
+  ]
 }

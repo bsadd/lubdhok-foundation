@@ -20,7 +20,7 @@ const HeroContainer = () => {
 
   return (
     <div className={styles.hero}>
-      <div style={heroImageStyle}></div>
+      <div style={heroImageStyle} title="Lubdhok Foundation Hero Container"></div>
       <div className={styles.heroDetails}>
         <ScrollAnimation animateIn="zoomIn" animateOnce>
           <h3 className={styles.heroHeadline}>{data.title}</h3>

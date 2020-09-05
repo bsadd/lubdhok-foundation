@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
 import Event from '../components/Event';
 import styles from './activities.module.css';
@@ -34,13 +33,10 @@ class ActivityPage extends React.Component {
     });
   }
   render() {
-    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
     const { activityByYear } = this.state;
     return (
-      <Layout>
+      <Layout pageTitle="Activites">
         <div className={styles.activityPage}>
-          <Helmet title={siteTitle} />
-
           <h2>Activities</h2>
           {Object.keys(activityByYear)
             .sort((a, b) => b - a)
@@ -64,11 +60,6 @@ export default ActivityPage;
 
 export const pageQuery = graphql`
   query ActivityQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulActivity(sort: { fields: [date], order: DESC }) {
       edges {
         node {

@@ -25,12 +25,13 @@ export const ActivityTimeline = () => {
     <div className={styles.container}>
       <div className={styles.title}>Recent activites</div>
       <VerticalTimeline className={styles.activityTimline}>
-        {activities.map(({ node: activity }) => (
+        {activities.map(({ node: activity }, index) => (
           <VerticalTimelineElement
             contentStyle={{ border: '3px solid #a23c38', color: '#a23c38' }}
             contentArrowStyle={{ borderRight: '10px solid  #a23c38' }}
             date={defaultDateFormat(activity.date)}
             iconStyle={{ background: '#a23c38', color: '#fff' }}
+            key={index}
           >
             <h4>{activity.name}</h4>
             <h5>{activity.venueText}</h5>
@@ -42,11 +43,11 @@ export const ActivityTimeline = () => {
       </VerticalTimeline>
       <div className={styles.seeMoreBtn}>
         <Link to="/activities">
-          {
-            isLessThanTab ?
+          {isLessThanTab ? (
             <FontAwesomeIcon icon={faCalendarAlt} />
-            : <span>See more</span>
-          }
+          ) : (
+            <span>See more</span>
+          )}
         </Link>
       </div>
     </div>

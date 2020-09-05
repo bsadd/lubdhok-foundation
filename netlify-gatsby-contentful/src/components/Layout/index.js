@@ -10,8 +10,9 @@ import { useSocialMedia } from './query/socialMediaQuery';
 import styles from './layout.module.css';
 import './base.css';
 import 'animate.css/animate.min.css';
+import SEO from '../SEO';
 
-const Layout = ({ children }) => {
+const Layout = ({ pageTitle, children }) => {
   const logo = useLogo();
   const navigationLink = useNavigationLink();
   const socialMediaLinks = useSocialMedia();
@@ -30,6 +31,7 @@ const Layout = ({ children }) => {
 
   return (
     <Container>
+      <SEO pageTitle={pageTitle} />
       <Navigation logo={logo} navigationLink={navigationLink} />
       <div className={styles.layoutContent}>{children}</div>
       <Footer logo={logo} socialMediaLinks={socialMediaLinks} />

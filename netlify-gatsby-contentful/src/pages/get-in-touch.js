@@ -1,18 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import get from 'lodash/get';
-import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
 import { SocialMedialLinks } from '../components/SocialMediaLinks';
 import styles from './get-in-touch.module.css';
 
 class GetInTouchPage extends React.Component {
   render() {
-    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
     return (
-      <Layout>
+      <Layout pageTitle="Get In Touch">
         <div className={styles.getInTouchPage}>
-          <Helmet title={siteTitle} />
           <h2>Get In Touch</h2>
           <div>
             <h3>Email</h3>
@@ -40,13 +35,3 @@ class GetInTouchPage extends React.Component {
 }
 
 export default GetInTouchPage;
-
-export const pageQuery = graphql`
-  query GetInTouchQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
