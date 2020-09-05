@@ -43,11 +43,11 @@ export const ActivityTimeline = () => {
       </VerticalTimeline>
       <div className={styles.seeMoreBtn}>
         <Link to="/activities">
-          {
-            isLessThanTab ?
+          {isLessThanTab ? (
             <FontAwesomeIcon icon={faCalendarAlt} />
-            : <span>See more</span>
-          }
+          ) : (
+            <span>See more</span>
+          )}
         </Link>
       </div>
     </div>

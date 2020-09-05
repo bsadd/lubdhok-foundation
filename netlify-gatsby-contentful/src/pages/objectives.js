@@ -7,7 +7,10 @@ import styles from './objectives.module.css';
 
 class ObjectivesPage extends React.Component {
   render() {
-    const legals = get(this.props.data, 'allContentfulLegal.edges[0].node.text.json');
+    const legals = get(
+      this.props.data,
+      'allContentfulLegal.edges[0].node.text.json'
+    );
 
     return (
       <Layout pageTitle="Objectives">

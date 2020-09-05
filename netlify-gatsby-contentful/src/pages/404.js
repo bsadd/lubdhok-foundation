@@ -29,7 +29,7 @@ class fourohfourPage extends React.Component {
           </div>
           <div>
             <h3>Join us and stay connected</h3>
-            <SocialMedialLinks size="lg"/>
+            <SocialMedialLinks size="lg" />
           </div>
         </div>
       </Layout>
