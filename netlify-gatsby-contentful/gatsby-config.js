@@ -19,7 +19,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Lubdhok',
+    title: 'Lubdhok foundation',
+    siteUrl: 'https://www.lubdhok07.org',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -27,6 +28,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
