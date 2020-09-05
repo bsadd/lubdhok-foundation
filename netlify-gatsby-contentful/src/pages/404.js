@@ -1,18 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import get from 'lodash/get';
-import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
 import { SocialMedialLinks } from '../components/SocialMediaLinks';
 import styles from './get-in-touch.module.css';
 
 class fourohfourPage extends React.Component {
   render() {
-    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
     return (
-      <Layout>
+      <Layout pageTitle="Error">
         <div className={styles.getInTouchPage}>
-          <Helmet title={siteTitle} />
           <h3>
             This page is currently under development. Meanwhile, if you want to
             get in touch:
@@ -43,13 +38,3 @@ class fourohfourPage extends React.Component {
 }
 
 export default fourohfourPage;
-
-export const pageQuery = graphql`
-  query fourohfourQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

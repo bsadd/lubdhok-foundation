@@ -1,21 +1,17 @@
 import React from 'react';
 import get from 'lodash/get';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
 import Member from '../components/Member';
 import styles from './executive-committee.module.css';
 
 class CommitteePage extends React.Component {
   render() {
-    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
     const members = get(this.props.data, 'allContentfulCommittee.edges');
 
     return (
-      <Layout>
+      <Layout pageTitle="Executive Committee">
         <div className={styles.committeePage}>
-          <Helmet title={siteTitle} />
-
           <h2>Committee Members</h2>
           {members.map(({ node: member }, index) => (
             <Member key={index} member={member} reverse={index % 2 == 1} />
@@ -30,11 +26,6 @@ export default CommitteePage;
 
 export const pageQuery = graphql`
   query CommitteeQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulCommittee(sort: { fields: [order], order: ASC }) {
       edges {
         node {

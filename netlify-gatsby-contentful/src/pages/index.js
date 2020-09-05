@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import Helmet from 'react-helmet';
 import Hero from '../components/HeroContainer';
 import Layout from '../components/Layout';
 import { LatestNews } from '../components/LatestNews';
@@ -10,13 +9,11 @@ import HomeSection from '../components/HomeSection';
 
 class HomePage extends React.Component {
   render() {
-    const siteTitle = get(this.props.data, 'site.siteMetadata.title');
     const homeSections = get(this.props.data, 'allContentfulHomeSection.edges');
 
     return (
-      <Layout>
+      <Layout pageTitle="Home">
         <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
           <LatestNews />
           <Hero />
           {homeSections.map(({ node }, index) => {
@@ -40,11 +37,6 @@ export default HomePage;
 
 export const pageQuery = graphql`
   query HomeQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulHomeSection(sort: { fields: [order], order: ASC }) {
       edges {
         node {

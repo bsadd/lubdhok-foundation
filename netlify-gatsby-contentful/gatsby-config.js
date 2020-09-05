@@ -19,8 +19,12 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Lubdhok foundation',
-    siteUrl: 'https://www.lubdhok07.org',
+    title: 'Lubdhok Foundation',
+    description: "A platform for BUET'07 to serve community",
+    keywords: ['Lubdhok', 'Foundation', 'Lubdhok foundation', 'Donation', 'Community', 'Lubdhok community'],
+    siteUrl: 'https://www.lubdhok07.org/',
+    image: 'site_preview.jpg',
+    author: '@Lubdhok07found1'
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -32,6 +36,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
-    }
-  ],
+    },
+  ]
 }
