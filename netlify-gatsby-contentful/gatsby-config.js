@@ -20,8 +20,8 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Lubdhok Foundation',
-    description: "A platform for BUET'07 to serve community",
-    keywords: ['Lubdhok', 'Foundation', 'Lubdhok foundation', 'Donation', 'Community', 'Lubdhok community'],
+    description: "Lubdhok Foundation is a voluntary, non-profitable, non-governmental, non-political, and charitable organization run by Bangladesh University of Engineering & Technology (BUET) alumni enrolled in 2007-08",
+    keywords: ['Lubdhok Foundation', 'Donation', 'Community', 'Lubdhok community'],
     siteUrl: 'https://www.lubdhok07.org/',
     image: 'site_preview.jpg',
     author: '@Lubdhok07found1'
