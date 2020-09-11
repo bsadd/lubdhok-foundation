@@ -10,8 +10,13 @@
 .getInTouchPage h3 {
   color: #a23c38;
 }
-
+.getInTouchPage span {
+  font-size: 18px;
+}
 .getInTouchPage .adminEmail {
   color: #a23c38;
   font-weight: bold; 
 }
+
+
+
