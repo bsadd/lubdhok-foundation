@@ -32,6 +32,23 @@
   background: #00acee;
 }
 
+.socialIcons.default > a.facebook {
+  background: #3b5998;
+}
+.socialIcons.default > a.youtube {
+  background: #cd201f;
+}
+.socialIcons.default > a.linkedin {
+  background: #0077b5;
+}
+.socialIcons.default > a.twitter {
+  background: #00acee;
+}
+
+.socialIcons.default > a > svg {
+  color: #c1c1c1;
+}
+
 .socialIcons.lg > a > svg {
   color: #c1c1c1;
 }

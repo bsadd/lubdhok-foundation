@@ -20,10 +20,10 @@ const iconSize = {
   lg: '2x',
 };
 
-export const SocialMedialLinks = ({ size = 'sm' }) => {
+export const SocialMedialLinks = ({ size = 'sm', color = 'default' }) => {
   const socialMediaLinks = useSocialMedia();
   return (
-    <div className={`${styles.socialIcons} ${styles[size]}`}>
+    <div className={`${styles.socialIcons} ${styles[size]} ${styles[color]}`}>
       {socialMediaLinks.map(({ node }, index) => (
         <a
           key={index}

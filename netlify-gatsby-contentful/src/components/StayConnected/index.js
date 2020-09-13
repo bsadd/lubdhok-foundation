@@ -9,7 +9,7 @@ export default ({ socialMediaLinks }) => (
       contact@lubdhok07.org
     </a>
     <div>
-      <SocialMedialLinks socialMediaLinks={socialMediaLinks} />
+      <SocialMedialLinks socialMediaLinks={socialMediaLinks} color="grey" />
     </div>
   </div>
 );
