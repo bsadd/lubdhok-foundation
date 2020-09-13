@@ -41,7 +41,7 @@ class GetInTouchPage extends React.Component {
               </div>
             </div>
             <div className={styles.getInTouchCol}>
-              <h3>Where you can find us?</h3>
+              <h3>Where you can find us</h3>
               <GoogleMap />
             </div>
           </div>
