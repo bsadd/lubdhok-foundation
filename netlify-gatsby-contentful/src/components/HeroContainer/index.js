@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useHeroContainerData } from './query';
 import styles from './heroContainer.module.css';
+
+const MEMBER_FORM_URL = 'https://forms.gle/Na2qTkpp7Avpe9Le6';
 
 const HeroContainer = () => {
   const data = useHeroContainerData();
@@ -32,9 +33,14 @@ const HeroContainer = () => {
           <p>{data.shortDescription}</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="zoomIn" animateOnce delay={250}>
-          <Link className={styles.heroBtn} to="/donate">
-            Donate
-          </Link>
+          <a
+            className={styles.heroBtn}
+            href={MEMBER_FORM_URL}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Become a member
+          </a>
         </ScrollAnimation>
       </div>
     </div>
