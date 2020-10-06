@@ -17,10 +17,10 @@ class fourohfourPage extends React.Component {
             <span>
               If you have any queries, drop an email to our admin: {` `}
               <a
-                href="mailto:lubdhok.foundation@gmail.com"
+                href="mailto:contact@lubdhok07.org"
                 className={styles.adminEmail}
               >
-                lubdhok.foundation@gmail.com
+                contact@lubdhok07.org
               </a>
               .
             </span>
@@ -29,7 +29,7 @@ class fourohfourPage extends React.Component {
           </div>
           <div>
             <h3>Join us and stay connected</h3>
-            <SocialMedialLinks size="lg" />
+            <SocialMedialLinks />
           </div>
         </div>
       </Layout>
