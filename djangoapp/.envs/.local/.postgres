@@ -1,7 +1,0 @@
-# PostgreSQL
-# ------------------------------------------------------------------------------
-POSTGRES_HOST=postgres
-POSTGRES_PORT=5432
-POSTGRES_DB=lubdhok_foundation
-POSTGRES_USER=BkRSdqDyDmTUmdZdnXPMZSWezSncfBaO
-POSTGRES_PASSWORD=pQWPMyaqwTb4ENhDqPyEVC5vV3p97yEqq4518i58KLZZIWDskYcReeQSZkDPqRph
