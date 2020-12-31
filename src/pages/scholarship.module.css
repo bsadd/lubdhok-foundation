@@ -1,0 +1,43 @@
+.scholarshiphPage {
+  padding: 0 30px;
+  margin-bottom: 40px;
+}
+
+.scholarshipPage h2 {
+  font-size: 48px;
+  margin-bottom: 0;
+  color: #a23c38;
+}
+.scholarshipPage h3 {
+  color: #a23c38;
+}
+.scholarshipPage span {
+  font-size: 18px;
+}
+.scholarshipPage .adminEmail {
+  color: #a23c38;
+  font-weight: bold; 
+}
+
+.scholarshipContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+}
+
+.scholarshipCol {
+  flex: 1;
+}
+
+.scholarshipCol:nth-child(2) {
+  margin: 12px 16px;
+}
+
+@media(max-width: 512px) {
+  .scholarshipContainer {
+    flex-direction: column;
+  }
+}
+
+
+
