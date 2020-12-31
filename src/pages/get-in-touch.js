@@ -31,8 +31,8 @@ class GetInTouchPage extends React.Component {
                 <h3>Mailing Address</h3>
                 <span>
                   Lubdhok'07 Foundation <br />
-                  291 Elephant Road <br />
-                  Katabon, Dhaka-1205
+                  302, Alishan Complex <br />
+                  300, Elephant Road, Dhaka-1205
                 </span>
               </div>
               <div>
