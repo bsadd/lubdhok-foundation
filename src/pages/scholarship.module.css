@@ -19,6 +19,11 @@
   font-weight: bold; 
 }
 
+.scholarshipPage .redText {
+  color: #ff0000;
+  font-weight: bold; 
+}
+
 .scholarshipContainer {
   display: flex;
   flex-direction: row;
