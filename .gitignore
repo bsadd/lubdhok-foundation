@@ -70,3 +70,6 @@ public
 
 # OS related files
 .DS_Store
+
+# deprecated folder
+netlify-gatsby-contentful/
