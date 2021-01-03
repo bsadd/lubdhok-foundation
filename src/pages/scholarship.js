@@ -28,7 +28,7 @@ class scholarshipPage extends React.Component {
 <li> অনলাইনে গুগল ফর্ম পূরণ করে। <a href="https://docs.google.com/forms/d/1LNZKsYLUg1hnOQe1ZoPh0iUPK1A761hjwSx-G1t4puc/" className={styles.adminEmail}> 
               ফর্ম পূরণ করতে এখানে ক্লিক করুন
               </a> </li>
-<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে ইমেইলের মাধ্যমে পাঠিয়ে ।  ইমেইলের বিষয় (সাবজেক্ট)  হিসেবে Shourov Memorial Scholarship 2021 অথবা সৌরভ স্মৃতি বৃত্তি ২০২১ থাকতে হবে।  ইমেইলঃ  
+<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে ইমেইলের মাধ্যমে পাঠিয়ে ।  ইমেইলের বিষয় (সাবজেক্ট)  হিসেবে <b>Shourov Memorial Scholarship 2021</b> অথবা <b>সৌরভ স্মৃতি বৃত্তি ২০২১</b> থাকতে হবে।  ইমেইলঃ  
               <a
                 href="mailto:lubdhok.foundation@gmail.com"
                 className={styles.adminEmail}
