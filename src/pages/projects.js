@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import { SocialMedialLinks } from '../components/SocialMediaLinks';
 import styles from './projects.module.css';
 
-class fourohfourPage extends React.Component {
+class projectsPage extends React.Component {
   render() {
     return (
       <Layout pageTitle="Projects">
