@@ -36,7 +36,7 @@ class scholarshipPage extends React.Component {
                 lubdhok.foundation@gmail.com
               </a>  
  </li>
-<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে লুব্ধক'০৭ ফাউন্ডেশনের ঠিকানায় চিঠি পাঠিয়ে। <a href="https://drive.google.com/file/d/1NyrQ1U1yDfvC9Hwfk7Ef0VSXjB_17-Ie/view" className={styles.adminEmail}> 
+<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে লুব্ধক'০৭ ফাউন্ডেশনের ঠিকানায় চিঠি পাঠিয়ে। <a href="https://drive.google.com/file/d/1LejejcBRSkO5_OFMKbOACV0m1ZR6X_6d/view" className={styles.adminEmail}> 
               ফর্ম ডাউনলোড করতে এখানে ক্লিক করুন
               </a> </li>
 </ul>
