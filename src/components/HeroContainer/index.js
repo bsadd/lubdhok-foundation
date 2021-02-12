@@ -67,7 +67,7 @@ const HeroContainer = () => {
   }
 
   return (
-    <div style={{ margin: '0 -140px' }}>
+    <div className={styles.container}>
       <Carousel
         responsive={responsive}
         autoPlay={true}
