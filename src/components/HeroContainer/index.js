@@ -9,7 +9,7 @@ const MEMBER_FORM_URL = 'https://forms.gle/Na2qTkpp7Avpe9Le6';
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1440 },
     items: 1,
     slidesToSlide: 1,
   },
@@ -29,8 +29,9 @@ const HeroItem = ({ data }) => {
   const heroImageStyle = {
     background: `url(${data.backgroundImage.fluid.src})`,
     backgroundRepeat: 'no-repeat',
-    height: '400px',
     backgroundSize: '100% 400px',
+    height: '400px',
+    backgroundPosition: 'cover',
   };
   return (
     <div className={styles.hero}>
@@ -43,7 +44,7 @@ const HeroItem = ({ data }) => {
           <h3 className={styles.heroHeadline}>{data.title}</h3>
         </ScrollAnimation>
         <ScrollAnimation animateIn="zoomIn" animateOnce delay={500}>
-          <p>{data.shortDescription}</p>
+          <h4>{data.shortDescription}</h4>
         </ScrollAnimation>
         <ScrollAnimation animateIn="zoomIn" animateOnce delay={250}>
           <a
@@ -71,7 +72,7 @@ const HeroContainer = () => {
       <Carousel
         responsive={responsive}
         autoPlay={true}
-        autoPlaySpeed={7000}
+        autoPlaySpeed={5000}
         infinite={true}
       >
         {

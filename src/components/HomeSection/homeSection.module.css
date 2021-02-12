@@ -1,3 +1,7 @@
+.container {
+  max-width: 1160px;
+}
+
 .homeSection {
   display: flex;
   flex-direction: row;

@@ -26,3 +26,9 @@ export default ({ title, description, reverse }) => (
     </ScrollAnimation>
   </div>
 );
+
+export const HomeSectionContainer = ({ children }) => (
+  <div className={styles.container}>
+    {children}
+  </div>
+)

@@ -17,6 +17,8 @@
   text-decoration: none;
   border-radius: 28px;
   border: 2px solid;
+  position: relative;
+  top: 6px;
 }
 
 .heroBtn:hover {
@@ -27,7 +29,7 @@
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
   left: 50%;
-  bottom: 20%;
+  bottom: 5%;
   transform: translate(-50%, 0);
   font-size: 14px;
   padding: 24px;
@@ -49,14 +51,12 @@
   .heroDetails {
     font-size: 20px;
   }
-  .container {
-    margin: 0 -140px;
-  }
 }
 
 .heroHeadline {
   margin: 0;
-  line-height: 1em;
+  line-height: 32px;
+  font-size: 32px;
 }
 
 .heroTitle {
