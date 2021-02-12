@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  background: #000;
   color: #fff;
   text-align: center;
   margin-bottom: 30px;
@@ -13,22 +12,25 @@
   padding: 15px 18px;
   text-decoration: none;
   border-radius: 28px;
-  bottom: -12px;
   position: relative;
+  border: 2px solid;
+  top: 24px;
+}
+
+.heroBtn:hover {
+  background: #771e1b;
 }
 
 .heroDetails {
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
-  left: 50%;
-  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  left: 25%;
+  bottom: 20%;
   transform: translate(-50%, 0);
   font-size: 14px;
-  padding: 0 0.5em;
-}
-
-.heroDetails p {
-  margin: 8px;
+  padding: 24px;
+  border-radius: 5px;
+  min-height: 160px;
 }
 
 @media(min-width: 600px) {
@@ -45,6 +47,7 @@
 
 .heroHeadline {
   margin: 0;
+  line-height: 0.5em;
 }
 
 .heroTitle {
