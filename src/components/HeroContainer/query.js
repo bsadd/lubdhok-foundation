@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 export const query = graphql`
@@ -9,7 +10,13 @@ export const query = graphql`
           shortDescription
           actionLabel
           actionLink
+          order
           backgroundImage {
+            fluid {
+              src
+            }
+          }
+          backgroundSmallImage {
             fluid {
               src
             }
@@ -22,5 +29,11 @@ export const query = graphql`
 
 export const useHeroContainerData = () => {
   const data = useStaticQuery(query);
-  return data.allContentfulHeroContainer.edges.map((item) => item.node);
+  const [containerItems, setContainerItems] = useState([]);
+  useEffect(() => {
+    const items =  data.allContentfulHeroContainer.edges.map((item) => item.node);
+    const sortedItems = [...items].sort((a, b) => a.order > b.order ? 1 : -1);
+    setContainerItems(sortedItems);
+  }, []);
+  return containerItems;
 };

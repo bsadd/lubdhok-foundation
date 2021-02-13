@@ -1,9 +1,10 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { useMedia } from '../../hooks/useMedia';
 import { useHeroContainerData } from './query';
 import styles from './heroContainer.module.css';
+import 'react-multi-carousel/lib/styles.css';
 
 const MEMBER_FORM_URL = 'https://forms.gle/Na2qTkpp7Avpe9Le6';
 
@@ -26,12 +27,24 @@ const responsive = {
 };
 
 const HeroItem = ({ data }) => {
+  console.log('hero item', data);
+  const { mobile } = useMedia();
+  const backgroundImg = mobile ?
+    data.backgroundSmallImage.fluid.src
+    : data.backgroundImage.fluid.src;
+
+  const mobileStyles = mobile ?
+    {
+      backgroundPosition: 'center',
+    }: {};
+
   const heroImageStyle = {
-    background: `url(${data.backgroundImage.fluid.src})`,
+    background: `url(${backgroundImg})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100% 400px',
     height: '400px',
     backgroundPosition: 'cover',
+    ...mobileStyles,
   };
   return (
     <div className={styles.hero}>
@@ -63,7 +76,8 @@ const HeroItem = ({ data }) => {
 
 const HeroContainer = () => {
   const items = useHeroContainerData();
-  if (!items) {
+  
+  if (!items.length) {
     return null;
   }
 
@@ -77,7 +91,7 @@ const HeroContainer = () => {
       >
         {
           items && items.length &&
-          items.map((item) => (<HeroItem data={item} />))
+            items.map((item, index) => (<HeroItem key={index} data={item} />))
         }
       </Carousel>
     </div>
