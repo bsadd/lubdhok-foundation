@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 export const query = graphql`
   query {
-    allContentfulHeroContainer(sort: { fields: [id], order: ASC }) {
+    allContentfulHeroContainer(sort: { fields: [order], order: ASC }) {
       edges {
         node {
           title
@@ -29,11 +28,5 @@ export const query = graphql`
 
 export const useHeroContainerData = () => {
   const data = useStaticQuery(query);
-  const [containerItems, setContainerItems] = useState([]);
-  useEffect(() => {
-    const items =  data.allContentfulHeroContainer.edges.map((item) => item.node);
-    const sortedItems = [...items].sort((a, b) => a.order > b.order ? 1 : -1);
-    setContainerItems(sortedItems);
-  }, []);
-  return containerItems;
+  return data.allContentfulHeroContainer.edges.map((item) => item.node);
 };
