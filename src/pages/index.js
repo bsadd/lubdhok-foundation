@@ -5,7 +5,7 @@ import Hero from '../components/HeroContainer';
 import Layout from '../components/Layout';
 import { LatestNews } from '../components/LatestNews';
 import { ActivityTimeline } from '../components/ActivityTimeline';
-import HomeSection from '../components/HomeSection';
+import HomeSection, { HomeSectionContainer } from '../components/HomeSection';
 
 class HomePage extends React.Component {
   render() {
@@ -16,17 +16,19 @@ class HomePage extends React.Component {
         <div style={{ background: '#fff' }}>
           <LatestNews />
           <Hero />
-          {homeSections.map(({ node }, index) => {
-            return (
-              <HomeSection
-                key={index}
-                title={node.title}
-                description={node.description}
-                reverse={index % 2 === 1}
-              />
-            );
-          })}
-          <ActivityTimeline />
+          <HomeSectionContainer>
+            {homeSections.map(({ node }, index) => {
+              return (
+                <HomeSection
+                  key={index}
+                  title={node.title}
+                  description={node.description}
+                  reverse={index % 2 === 1}
+                />
+              );
+            })}
+            <ActivityTimeline />
+          </HomeSectionContainer>
         </div>
       </Layout>
     );
