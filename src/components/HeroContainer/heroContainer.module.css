@@ -1,6 +1,9 @@
+.container {
+  margin: 0;
+}
+
 .hero {
   position: relative;
-  background: #000;
   color: #fff;
   text-align: center;
   margin-bottom: 30px;
@@ -10,30 +13,37 @@
 
 .heroBtn {
   background: #a23c38;
-  padding: 15px 18px;
+  padding: 14px 4px;
   text-decoration: none;
   border-radius: 28px;
-  bottom: -12px;
+  border: 2px solid;
   position: relative;
+  top: 6px;
+}
+
+.heroBtn:hover {
+  background: #771e1b;
 }
 
 .heroDetails {
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
   left: 50%;
-  bottom: 0;
+  bottom: 5%;
   transform: translate(-50%, 0);
   font-size: 14px;
-  padding: 0 0.5em;
-}
-
-.heroDetails p {
-  margin: 8px;
+  padding: 24px;
+  border-radius: 5px;
+  min-height: 160px;
 }
 
 @media(min-width: 600px) {
   .heroDetails {
     font-size: 16px;
+    left: 25%;
+  }
+  .heroBtn {
+    padding: 15px 18px;
   }
 }
 
@@ -45,6 +55,8 @@
 
 .heroHeadline {
   margin: 0;
+  line-height: 32px;
+  font-size: 32px;
 }
 
 .heroTitle {
