@@ -17,10 +17,10 @@ class fourohfourPage extends React.Component {
             <span>
               If you have any queries, drop an email to our admin: {` `}
               <a
-                href="mailto:contact@lubdhok07.org"
+                href="mailto:lubdhok.foundation@gmail.com"
                 className={styles.adminEmail}
               >
-                contact@lubdhok07.org
+                lubdhok.foundation@gmail.com
               </a>
               .
             </span>
