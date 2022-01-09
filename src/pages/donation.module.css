@@ -1,0 +1,26 @@
+.donatePage {
+  padding: 0 30px;
+  margin-bottom: 40px;
+}
+
+.donatePage h2 {
+  font-size: 48px;
+  margin-bottom: 0;
+  color: #a23c38;
+}
+.donatePage h3 {
+  color: #a23c38;
+}
+.donatePage span {
+  font-size: 18px;
+}
+
+.donatePage .adminEmail {
+  color: #a23c38;
+  font-weight: bold; 
+}
+
+.donatePage .redText {
+  color: #ff0000;
+  font-weight: bold; 
+}

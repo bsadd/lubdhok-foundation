@@ -61,7 +61,6 @@
     "url": "git+https://github.com/bsadd/lubdhok-foundation.git"
   },
   "scripts": {
-    "dev": "npm run develop",
     "develop": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",

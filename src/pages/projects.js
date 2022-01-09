@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
-import { SocialMedialLinks } from '../components/SocialMediaLinks';
 import styles from './projects.module.css';
 
 class projectsPage extends React.Component {
@@ -9,10 +9,9 @@ class projectsPage extends React.Component {
       <Layout pageTitle="Projects">
         <div className={styles.projectsPage}>
           <h3>
-            <a href="https://www.lubdhok07.org/scholarship-2022"
-              >
+            <Link to="/scholarship-2022">
                 Shourov Memorial Scholarship 2022
-              </a> 
+            </Link> 
           </h3>
         </div>
       </Layout>

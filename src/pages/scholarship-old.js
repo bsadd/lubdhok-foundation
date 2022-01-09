@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { SocialMedialLinks } from '../components/SocialMediaLinks';
 import styles from './scholarship.module.css';
 
 class scholarshipPage extends React.Component {
