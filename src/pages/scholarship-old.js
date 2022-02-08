@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import styles from './scholarship.module.css';
+import styles from './scholarships/scholarship.module.css';
 
 class scholarshipPage extends React.Component {
   render() {

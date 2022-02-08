@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { DonationMethod } from '../components/DonationMethod';
+import { PaymentMethodContainer } from '../components/PaymentMethodContainer';
 import styles from './donation.module.css';
 
 {/* <div>
@@ -42,11 +42,11 @@ import styles from './donation.module.css';
 class donationPage extends React.Component {
   render() {
     return (
-      <Layout pageTitle="Sonation">
+      <Layout pageTitle="Donation">
         <div className={styles.donationPage}>
           <h3> How to donate</h3>
           <div>
-            <DonationMethod />
+            <PaymentMethodContainer />
           </div>
         </div>
       </Layout>
