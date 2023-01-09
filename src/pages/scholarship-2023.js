@@ -7,7 +7,7 @@ class scholarshipPage extends React.Component {
   render() {
     return (
       <Layout pageTitle="Scholarship">
-        <div className={styles.scholarshipPage}>
+        <div style={{ padding: '40px' }}>
           <h3>
             সৌরভ স্মৃতি বৃত্তি
           </h3>
