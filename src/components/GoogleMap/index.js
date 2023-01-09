@@ -13,7 +13,7 @@ export const GoogleMap = props => {
       zoom={15}
       initialCenter={{
         lat: 23.74195087942417,
-        lng: 90.39520469042469,
+        lng: 90.39520469042469
       }}
     >
       <Marker />, 
