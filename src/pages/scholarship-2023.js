@@ -54,7 +54,7 @@ class scholarshipPage extends React.Component {
 <br />
 <br />
 
-<div className={styles.redText}>বৃত্তির আবেদনের শেষ সময় ২৮ ফেব্রুয়ারি, ২০২২। </div> 
+<div className={styles.redText}>বৃত্তির আবেদনের শেষ সময় ১০ ফেব্রুয়ারি, ২০২৩। </div> 
 
 <br />
 <span>
