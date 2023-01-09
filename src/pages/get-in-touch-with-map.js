@@ -39,6 +39,10 @@ class GetInTouchPage extends React.Component {
                 <SocialMedialLinks />
               </div>
             </div>
+            <div className={styles.getInTouchCol}>
+              <h3>Where you can find us</h3>
+              <GoogleMap />
+            </div>
           </div>
         </div>
       </Layout>
