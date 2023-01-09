@@ -25,10 +25,10 @@ class scholarshipPage extends React.Component {
 যেকোন কলেজে উচ্চমাধ্যমিক অধ্যনরত অথবা যেকোন বিশ্ববিদ্যলয়ের স্নাতকে অধ্যয়নরত বা সদ্য ভর্তি হওয়া যে কোন ছাত্র ছাত্রী বৃত্তির জন্য আবেদন করতে পারবে। বৃত্তির মেয়াদকাল ১ বছর। ১ বছর পর বৃত্তি পুনর্বিবেচনার জন্য পুনরায় আবেদন 
 বাধ্যতামূলক। বৃত্তির জন্যে তিন ভাবে আবেদন করা যেতে পারেঃ 
 <ul>
-<li> অনলাইনে গুগল ফর্ম পূরণ করে। <a href="https://forms.gle/2xxt6U82Sfyy96es6" className={styles.adminEmail}> 
+<li> অনলাইনে গুগল ফর্ম পূরণ করে। <a href="https://forms.gle/9Awgy24gxiRAAYYNA" className={styles.adminEmail}> 
               ফর্ম পূরণ করতে এখানে ক্লিক করুন
               </a> </li>
-<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে ইমেইলের মাধ্যমে পাঠিয়ে ।  ইমেইলের বিষয় (সাবজেক্ট)  হিসেবে <b>Shourov Memorial Scholarship 2022</b> অথবা <b>সৌরভ স্মৃতি বৃত্তি ২০২২</b> থাকতে হবে।  ইমেইলঃ  
+<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে ইমেইলের মাধ্যমে পাঠিয়ে ।  ইমেইলের বিষয় (সাবজেক্ট)  হিসেবে <b>Shourov Memorial Scholarship 2023</b> অথবা <b>সৌরভ স্মৃতি বৃত্তি ২০২৩</b> থাকতে হবে।  ইমেইলঃ  
               <a
                 href="mailto:lubdhok.foundation@gmail.com"
                 className={styles.adminEmail}
@@ -36,7 +36,7 @@ class scholarshipPage extends React.Component {
                 lubdhok.foundation@gmail.com
               </a>  
  </li>
-<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে লুব্ধক'০৭ ফাউন্ডেশনের ঠিকানায় চিঠি পাঠিয়ে। <a href="https://drive.google.com/file/d/1KmZ4t7C37NjGmMzrSPfPEDRo34CZU7VG/view" className={styles.adminEmail}> 
+<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে লুব্ধক'০৭ ফাউন্ডেশনের ঠিকানায় চিঠি পাঠিয়ে। <a href="https://drive.google.com/file/d/1oOqanyMbnH8ye2_2RDwH1ukL-GhWZ-MX/view" className={styles.adminEmail}> 
               ফর্ম ডাউনলোড করতে এখানে ক্লিক করুন
               </a> </li>
 </ul>
@@ -84,7 +84,7 @@ class scholarshipPage extends React.Component {
     Account number: 4404002000835<br />
     Routing No: 200270522<br />
     <br />
-    <b>Paypal & Zelle:</b><br />
+    <b>Paypal</b><br />
     Email: AHMED589@UMN.EDU<br />
      <br />
     <b>Bkash (Personal):</b><br />
