@@ -9,9 +9,9 @@ class projectsPage extends React.Component {
       <Layout pageTitle="Projects">
         <div className={styles.projectsPage}>
           <h3>
-            <a href="https://www.lubdhok07.org/scholarship-2022"
+            <a href="https://www.lubdhok07.org/scholarship-2023"
               >
-                Shourov Memorial Scholarship 2022
+                Shourov Memorial Scholarship 2023
               </a> 
           </h3>
         </div>
