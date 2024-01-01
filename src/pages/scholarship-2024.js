@@ -22,13 +22,13 @@ class scholarshipPage extends React.Component {
 <br />
 <br />
 <span>
-যেকোন কলেজে উচ্চমাধ্যমিক অধ্যয়নরত অথবা যেকোন বিশ্ববিদ্যলয়ের স্নাতকে অধ্যয়নরত বা সদ্য ভর্তি হওয়া যে কোন ছাত্র ছাত্রী বৃত্তির জন্য আবেদন করতে পারবে। বৃত্তির মেয়াদকাল ১ বছর। ১ বছর পর বৃত্তি পুনর্বিবেচনার জন্য পুনরায় আবেদন 
+যেকোন কলেজে উচ্চমাধ্যমিক অধ্যয়ন্রত অথবা যেকোন বিশ্ববিদ্যলয়ের স্নাতকে অধ্যয়নরত বা সদ্য ভর্তি হওয়া যে কোন ছাত্র ছাত্রী বৃত্তির জন্য আবেদন করতে পারবে। বৃত্তির মেয়াদকাল ১ বছর। ১ বছর পর বৃত্তি পুনর্বিবেচনার জন্য পুনরায় আবেদন 
 বাধ্যতামূলক। বৃত্তির জন্যে তিন ভাবে আবেদন করা যেতে পারেঃ 
 <ul>
-<li> অনলাইনে গুগল ফর্ম পূরণ করে। <a href="https://forms.gle/9Awgy24gxiRAAYYNA" className={styles.adminEmail}> 
+<li> অনলাইনে গুগল ফর্ম পূরণ করে। <a href="https://forms.gle/BTo75ubRwzBFvm2D6" className={styles.adminEmail}> 
               ফর্ম পূরণ করতে এখানে ক্লিক করুন
               </a> </li>
-<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে ইমেইলের মাধ্যমে পাঠিয়ে ।  ইমেইলের বিষয় (সাবজেক্ট)  হিসেবে <b>Shourov Memorial Scholarship 2023</b> অথবা <b>সৌরভ স্মৃতি বৃত্তি ২০২৩</b> থাকতে হবে।  ইমেইলঃ  
+<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে ইমেইলের মাধ্যমে পাঠিয়ে ।  ইমেইলের বিষয় (সাবজেক্ট)  হিসেবে <b>Shourov Memorial Scholarship 2024</b> অথবা <b>সৌরভ স্মৃতি বৃত্তি ২০২৪</b> থাকতে হবে।  ইমেইলঃ  
               <a
                 href="mailto:lubdhok.foundation@gmail.com"
                 className={styles.adminEmail}
@@ -36,7 +36,7 @@ class scholarshipPage extends React.Component {
                 lubdhok.foundation@gmail.com
               </a>  
  </li>
-<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে লুব্ধক'০৭ ফাউন্ডেশনের ঠিকানায় চিঠি পাঠিয়ে। <a href="https://drive.google.com/file/d/1oOqanyMbnH8ye2_2RDwH1ukL-GhWZ-MX/view" className={styles.adminEmail}> 
+<li> ওয়েবসাইট থেকে ফর্মের পিডিএফ ডাউনলোড করে সেটা পূরণ করে লুব্ধক'০৭ ফাউন্ডেশনের ঠিকানায় চিঠি পাঠিয়ে। <a href="https://drive.google.com/file/d/1xegjcP9n_KjJMfRwbDKgcd9tU7p-uBAw/view" className={styles.adminEmail}> 
               ফর্ম ডাউনলোড করতে এখানে ক্লিক করুন
               </a> </li>
 </ul>
@@ -53,7 +53,7 @@ class scholarshipPage extends React.Component {
 <br />
 <br />
 
-<div className={styles.redText}>বৃত্তির আবেদনের শেষ সময় ১০ ফেব্রুয়ারি, ২০২৩। </div> 
+<div className={styles.redText}>বৃত্তির আবেদনের শেষ সময় ৩১ জানুয়ারি, ২০২৪। </div> 
 
 <br />
 <span>
